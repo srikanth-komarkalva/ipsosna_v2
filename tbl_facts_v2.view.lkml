@@ -153,7 +153,6 @@ view: tbl_facts_v2 {
 
   dimension: category_id {
     group_label: "Question Information"
-    primary_key: yes
     type: string
     sql: ${TABLE}.CategoryID ;;
   }
@@ -359,8 +358,17 @@ view: tbl_facts_v2 {
   dimension: unique_id {
     group_label: "Question Information"
     hidden: yes
+    primary_key: yes
     type: number
     sql: ${TABLE}.Unique_ID ;;
+  }
+
+  measure: unwtct {
+    group_label: "Weight Metrics"
+    description: "The count of respondents"
+    label: "Unweighted Count"
+    type: count_distinct
+    sql: ${unique_id} ;;
   }
 
   measure: count {

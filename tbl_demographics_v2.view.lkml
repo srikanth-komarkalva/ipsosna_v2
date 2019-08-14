@@ -260,6 +260,7 @@ view: tbl_demographics_v2 {
 
   dimension: unique_id {
     group_label: "Demographic Fields"
+    primary_key: yes
     type: number
     sql: ${TABLE}.Unique_ID ;;
   }
@@ -550,7 +551,7 @@ view: tbl_demographics_v2 {
     type: sum
     sql: ${weight} ;;
     value_format_name: decimal_2
-    drill_fields: [country,region,wave,type_net,wtct]
+#     drill_fields: [country,region,wave,type_net,wtct]
     #  pct_wtct]
   }
 
@@ -561,7 +562,7 @@ view: tbl_demographics_v2 {
     type: number
     sql: ${wtct}/${bases.min_wtbase} ;;
     value_format_name: percent_0
-    drill_fields: [country,region,wave,type_net,wtct,pct_wtct]
+#     drill_fields: [country,region,wave,type_net,wtct,pct_wtct]
   }
 
 #   parameter: measure_selector_parm {
