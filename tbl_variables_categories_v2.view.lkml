@@ -5,6 +5,7 @@ view: tbl_variables_categories_v2 {
     group_label: "Question Information"
     hidden: yes
     type: string
+#     primary_key: yes
     sql: ${TABLE}.CategoryID ;;
   }
 
@@ -22,6 +23,7 @@ view: tbl_variables_categories_v2 {
 
   dimension: variable_id {
     group_label: "Question Information"
+    primary_key: yes
     type: string
     sql: ${TABLE}.VariableID ;;
   }
