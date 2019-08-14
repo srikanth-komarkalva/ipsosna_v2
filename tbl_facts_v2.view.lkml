@@ -153,6 +153,7 @@ view: tbl_facts_v2 {
 
   dimension: category_id {
     group_label: "Question Information"
+    primary_key: yes
     type: string
     sql: ${TABLE}.CategoryID ;;
   }
