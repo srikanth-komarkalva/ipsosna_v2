@@ -393,6 +393,7 @@ view: tbl_demographics_v2 {
 
   measure: count {
     group_label: "Demographic Fields"
+    hidden: yes
     type: count
     drill_fields: []
   }
@@ -679,40 +680,4 @@ view: tbl_demographics_v2 {
     sql: ${wtct}/${sum_wtct_subtotal} ;;
     value_format_name: percent_0
   }
-
-#   parameter: measure_selector_parm {
-#     view_label: "Crosstab Question Selector"
-#     label: "Measure Selector"
-#     description: "Measure Selector for Q by Q Crosstab"
-#     type: string
-#     allowed_value: {
-#       label: "% Weight"
-#       value: "pct"
-#     }
-#     allowed_value: {
-#       label: "Weighted Count"
-#       value: "weight"
-#     }
-#   }
-
-  ##html part makes sure percents are displayed with percent formatting, decimals with decimal formatting
-#   measure: measure_selector {
-#     group_label: "Weight Metrics"
-#     label: "Selected Measure"
-#     type: number
-#     description: "To be used with the Measure Selector filter"
-#     label_from_parameter: measure_selector_parm
-#     sql:
-#     CASE
-#       WHEN {% parameter measure_selector_parm %} = 'pct' THEN ${pct_wtct}
-#       WHEN {% parameter measure_selector_parm %} = 'weight' THEN ${wtct}
-#       ELSE
-#         NULL
-#     END;;
-#     html: {% if measure_selector_parm._parameter_value == "'pct'" %}
-#             {{ pct_wtct._rendered_value }}
-#           {% else %}
-#             {{ wtct._rendered_value }}
-#           {% endif %};;
-#   }
 }
