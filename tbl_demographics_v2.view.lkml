@@ -675,7 +675,7 @@ view: tbl_demographics_v2 {
   measure: percent_weight {
     type: number
     group_label: "Weight Metrics"
-    label: "Percent of Weight Calc"
+    label: "Percent of Base"
     sql: ${wtct}/${sum_wtct_subtotal} ;;
     value_format_name: percent_0
   }
