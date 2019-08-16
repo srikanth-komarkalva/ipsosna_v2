@@ -565,6 +565,117 @@ view: tbl_demographics_v2 {
 #     drill_fields: [country,region,wave,type_net,wtct,pct_wtct]
   }
 
+  measure: sum_wtct_subtotal {
+    type: number
+    sql:  sum(${wtct}) OVER ( PARTITION BY
+
+                       -- all measure_fact fields
+                          {% if tbl_facts_v2.category_id._is_selected %} ${tbl_facts_v2.category_id}, {% endif %}
+
+                          -- all demographic_fact fields
+                          {% if attribute_selector1._parameter_value == 'campaign_type' and attribute_selector1_dim._is_selected %}
+                            ${campaign_type} ,
+                          {% elsif attribute_selector2._parameter_value == 'campaign_type' and attribute_selector2_dim._is_selected %}
+                            ${campaign_type} ,
+                          {% elsif campaign_type._is_selected %}
+                            ${campaign_type} ,
+                          {% endif %}
+                          {% if attribute_selector1._parameter_value == 'country' and attribute_selector1_dim._is_selected %}
+                            ${country} ,
+                          {% elsif attribute_selector2._parameter_value == 'country' and attribute_selector2_dim._is_selected %}
+                            ${country} ,
+                          {% elsif country._is_selected %}
+                            ${country} ,
+                          {% endif %}
+                          {% if data_collection_finish_time._is_selected %} ${data_collection_finish_time} , {% endif %}
+                          {% if data_collection_start_time._is_selected %} ${data_collection_start_time} , {% endif %}
+                          {% if decision_maker._is_selected %} ${decision_maker} , {% endif %}
+                          {% if gcs._is_selected %} ${gcs} ,{% endif %}
+                          {% if attribute_selector1._parameter_value == 'job_function' and attribute_selector1_dim._is_selected %}
+                            ${job_function} ,
+                          {% elsif attribute_selector2._parameter_value == 'job_function' and attribute_selector2_dim._is_selected %}
+                            ${job_function} ,
+                          {% elsif job_function._is_selected %}
+                            ${job_function} ,
+                          {% endif %}
+                          {% if attribute_selector1._parameter_value == 'job_level' and attribute_selector1_dim._is_selected %}
+                            ${job_level} ,
+                          {% elsif attribute_selector2._parameter_value == 'job_level' and attribute_selector2_dim._is_selected %}
+                            ${job_level} ,
+                          {% elsif job_level._is_selected %}
+                            ${job_level} ,
+                          {% endif %}
+                          {% if lcs._is_selected %} ${lcs} ,{% endif %}
+                          {% if media_mobile._is_selected %} ${media_mobile} ,{% endif %}
+                          {% if media_none._is_selected %} ${media_none} ,{% endif %}
+                          {% if media_online._is_selected %} ${media_online} ,{% endif %}
+                          {% if media_outdoor._is_selected %} ${media_outdoor} ,{% endif %}
+                          {% if media_print._is_selected %} ${media_print} ,{% endif %}
+                          {% if media_radio._is_selected %} ${media_radio} ,{% endif %}
+                          {% if media_tv._is_selected %} ${media_tv} ,{% endif %}
+                          {% if attribute_selector1._parameter_value == 'region' and attribute_selector1_dim._is_selected %}
+                            ${region} ,
+                          {% elsif attribute_selector2._parameter_value == 'region' and attribute_selector2_dim._is_selected %}
+                            ${region} ,
+                          {% elsif region._is_selected %}
+                            ${region} ,
+                          {% endif %}
+                          {% if respondent_serial._is_selected %} ${respondent_serial} ,{% endif %}
+                          {% if attribute_selector1._parameter_value == 'type' and attribute_selector1_dim._is_selected %}
+                            ${type} ,
+                          {% elsif attribute_selector2._parameter_value == 'type' and attribute_selector2_dim._is_selected %}
+                            ${type} ,
+                          {% elsif type._is_selected %}
+                            ${type} ,
+                          {% endif %}
+                          {% if attribute_selector1._parameter_value == 'type_agency' and attribute_selector1_dim._is_selected %}
+                            ${type_agency} ,
+                          {% elsif attribute_selector2._parameter_value == 'type_agency' and attribute_selector2_dim._is_selected %}
+                            ${type_agency} ,
+                          {% elsif type_agency._is_selected %}
+                            ${type_agency} ,
+                          {% endif %}
+                          {% if type_net._is_selected %} ${type_net} , {% endif %}
+                          {% if unique_id._is_selected %} ${unique_id} ,{% endif %}
+                          {% if vertical_automotive._is_selected %} ${vertical_automotive} ,{% endif %}
+                          {% if vertical_cpg._is_selected %} ${vertical_cpg} ,{% endif %}
+                          {% if vertical_entertainment._is_selected %} ${vertical_entertainment} ,{% endif %}
+                          {% if vertical_fashion._is_selected %} ${vertical_fashion} ,{% endif %}
+                          {% if vertical_finance._is_selected %}  ${vertical_finance} ,{% endif %}
+                          {% if vertical_gaming._is_selected %}  ${vertical_gaming} ,{% endif %}
+                          {% if vertical_gaming_consoles._is_selected %}  ${vertical_gaming_consoles} ,{% endif %}
+                          {% if vertical_gaming_mobile._is_selected %}  ${vertical_gaming_mobile} ,{% endif %}
+                          {% if vertical_gaming_other._is_selected %}  ${vertical_gaming_other} ,{% endif %}
+                          {% if vertical_gaming_pc._is_selected %}  ${vertical_gaming_pc} ,{% endif %}
+                          {% if vertical_healthcare._is_selected %}  ${vertical_healthcare} ,{% endif %}
+                          {% if vertical_home._is_selected %} ${vertical_home} ,{% endif %}
+                          {% if vertical_kids._is_selected %}  ${vertical_kids} ,{% endif %}
+                          {% if vertical_other._is_selected %}  ${vertical_other}, {% endif %}
+                          {% if vertical_personal_care._is_selected %}  ${vertical_personal_care} ,{% endif %}
+                          {% if vertical_qsr._is_selected %}  ${vertical_qsr}, {% endif %}
+                          {% if vertical_retail._is_selected %}  ${vertical_retail} ,{% endif %}
+                          {% if vertical_tech._is_selected %}  ${vertical_tech} ,{% endif %}
+                          {% if vertical_travel._is_selected %}  ${vertical_travel} ,{% endif %}
+                          {% if attribute_selector1._parameter_value == 'wave' and attribute_selector1_dim._is_selected %}
+                            ${wave} ,
+                          {% elsif attribute_selector2._parameter_value == 'wave' and attribute_selector2_dim._is_selected %}
+                            ${wave} ,
+                          {% elsif wave._is_selected %}
+                            ${wave} ,
+                          {% endif %}
+                          {% if weight._is_selected %}  ${weight} ,{% endif %}
+                          {% if year._is_selected %}  ${year} ,{% endif %}
+                          1)
+                          ;;
+  }
+
+  measure: percent_weight {
+    type: number
+    label: "Percent of Weight Calc"
+    sql: ${wtct}/${sum_wtct_subtotal} ;;
+    value_format_name: percent_0
+  }
+
 #   parameter: measure_selector_parm {
 #     view_label: "Crosstab Question Selector"
 #     label: "Measure Selector"
