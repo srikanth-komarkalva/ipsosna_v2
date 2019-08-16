@@ -5,6 +5,7 @@ view: tbl_categories_v2 {
     primary_key: yes
     hidden: yes
     type: string
+    label: "Brand"
     order_by_field: catorder
     sql: ${TABLE}.CategoryId ;;
   }
