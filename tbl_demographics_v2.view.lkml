@@ -609,14 +609,6 @@ view: tbl_demographics_v2 {
                           {% elsif job_level._is_selected %}
                             ${job_level} ,
                           {% endif %}
-                          {% if lcs._is_selected %} ${lcs} ,{% endif %}
-                          {% if media_mobile._is_selected %} ${media_mobile} ,{% endif %}
-                          {% if media_none._is_selected %} ${media_none} ,{% endif %}
-                          {% if media_online._is_selected %} ${media_online} ,{% endif %}
-                          {% if media_outdoor._is_selected %} ${media_outdoor} ,{% endif %}
-                          {% if media_print._is_selected %} ${media_print} ,{% endif %}
-                          {% if media_radio._is_selected %} ${media_radio} ,{% endif %}
-                          {% if media_tv._is_selected %} ${media_tv} ,{% endif %}
                           {% if attribute_selector1._parameter_value == 'region' and attribute_selector1_dim._is_selected %}
                             ${region} ,
                           {% elsif attribute_selector2._parameter_value == 'region' and attribute_selector2_dim._is_selected %}
@@ -639,6 +631,14 @@ view: tbl_demographics_v2 {
                           {% elsif type_agency._is_selected %}
                             ${type_agency} ,
                           {% endif %}
+                          {% if lcs._is_selected %} ${lcs} ,{% endif %}
+                          {% if media_mobile._is_selected %} ${media_mobile} ,{% endif %}
+                          {% if media_none._is_selected %} ${media_none} ,{% endif %}
+                          {% if media_online._is_selected %} ${media_online} ,{% endif %}
+                          {% if media_outdoor._is_selected %} ${media_outdoor} ,{% endif %}
+                          {% if media_print._is_selected %} ${media_print} ,{% endif %}
+                          {% if media_radio._is_selected %} ${media_radio} ,{% endif %}
+                          {% if media_tv._is_selected %} ${media_tv} ,{% endif %}
                           {% if type_net._is_selected %} ${type_net} , {% endif %}
                           {% if unique_id._is_selected %} ${unique_id} ,{% endif %}
                           {% if vertical_automotive._is_selected %} ${vertical_automotive} ,{% endif %}
