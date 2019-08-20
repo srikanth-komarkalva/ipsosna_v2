@@ -8,96 +8,96 @@ view: tbl_facts_v2 {
     type: unquoted
 
     allowed_value: {
-      label: "brand_ad_placement_you_tube"
+      label: "Brand Ad Placement YouTube"
       value: "Brand_Ad_Placement_YouTube"
     }
     allowed_value: {
-      label: "brand_ad_results"
-      value: "brand_ad_results"
+      label: "Brand Ad Results"
+      value: "Brand_AdResults"
     }
     allowed_value: {
-      label: "brand_audiences"
-      value: "brand_audiences"
+      label: "Brand Audiences"
+      value: "Brand_Audiences"
     }
     allowed_value: {
-      label: "brand_biz_results"
-      value: "brand_biz_results"
+      label: "Brand Biz Results"
+      value: "Brand_BizResults"
     }
     allowed_value: {
-      label: "brand_channels"
-      value: "brand_channels"
+      label: "Brand Channels"
+      value: "Brand_Channels"
     }
     allowed_value: {
-      label: "brand_consider"
-      value: "brand_consider"
+      label: "Brand Consider"
+      value: "Brand_Consider"
     }
     allowed_value: {
-      label: "brand_content"
-      value: "brand_content"
+      label: "Brand Content"
+      value: "Brand_Content"
     }
     allowed_value: {
-      label: "brand_easy"
-      value: "brand_easy"
+      label: "Brand Easy"
+      value: "Brand_Easy"
     }
     allowed_value: {
-      label: "brand_essential"
-      value: "brand_essential"
+      label: "Brand Essential"
+      value: "Brand_Essential"
     }
     allowed_value: {
-      label: "brand_fam"
-      value: "brand_fam"
+      label: "Brand Fam"
+      value: "Brand_Fam"
     }
     allowed_value: {
-      label: "brand_fam_net"
-      value: "brand_fam_net"
+      label: "Brand Fam Net"
+      value: "Brand_Fam_Net"
     }
     allowed_value: {
-      label: "brand_import_ad_results"
-      value: "brand_import_ad_results"
+      label: "Brand Import Ad Results"
+      value: "Brand_Import_Ad_Results"
     }
     allowed_value: {
-      label: "brand_import_audiences"
-      value: "brand_import_audiences"
+      label: "Brand Import Audiences"
+      value: "Brand_Import_Audiences"
     }
     allowed_value: {
-      label: "brand_import_biz_results"
-      value: "brand_import_biz_results"
+      label: "Brand Import Biz Results"
+      value: "Brand_Import_Biz_Results"
     }
     allowed_value: {
-      label: "brand_import_channels"
-      value: "brand_import_channels"
+      label: "Brand Import Channels"
+      value: "Brand_Import_Channels"
     }
     allowed_value: {
-      label: "brand_import_content"
-      value: "brand_import_content"
+      label: "Brand Import Content"
+      value: "Brand_Import_Content"
     }
     allowed_value: {
-      label: "brand_import_easy"
-      value: "brand_import_easy"
+      label: "Brand Import Easy"
+      value: "Brand_Import_Easy"
     }
     allowed_value: {
-      label: "brand_import_trust"
-      value: "brand_import_trust"
+      label: "Brand Import Trust"
+      value: "Brand_Import_Trust"
     }
     allowed_value: {
-      label: "brand_most_essential"
-      value: "brand_most_essential"
+      label: "Brand Most Essential"
+      value: "Brand_MostEssential"
     }
     allowed_value: {
-      label: "brand_prefer"
-      value: "brand_prefer"
+      label: "Brand Prefer"
+      value: "Brand_Prefer"
     }
     allowed_value: {
-      label: "brand_purchase"
-      value: "brand_purchase"
+      label: "Brand Purchase"
+      value: "Brand_Purchase"
     }
     allowed_value: {
-      label: "brand_spend"
-      value: "brand_spend"
+      label: "Brand Spend"
+      value: "Brand_Spend"
     }
     allowed_value: {
-      label: "brand_trust"
-      value: "brand_trust"
+      label: "Brand Trust"
+      value: "Brand_Trust"
     }
   }
 
