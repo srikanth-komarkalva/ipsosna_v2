@@ -9,7 +9,7 @@ view: tbl_facts_v2 {
 
     allowed_value: {
       label: "brand_ad_placement_you_tube"
-      value: "brand_ad_placement_you_tube"
+      value: "Brand_Ad_Placement_YouTube"
     }
     allowed_value: {
       label: "brand_ad_results"
