@@ -104,17 +104,6 @@ view: tbl_facts_v2 {
     }
   }
 
-
-  dimension: question_selector1_dim {
-    group_label: "Select Question to Filter"
-    label: "Question Selector 1"
-#   order_by_field: attribute_selector1_sort
-    description: "To be used with the Question Selector filters"
-    label_from_parameter: question_selector1
-    sql: ${TABLE}.{% parameter question_selector1 %};;
-  }
-
-
   dimension: brand_ad_placement_you_tube {
     group_label: "Question Information"
     type: string
@@ -476,6 +465,14 @@ view: tbl_facts_v2 {
     primary_key: yes
     type: number
     sql: ${TABLE}.Unique_ID ;;
+  }
+
+  dimension: question_selector1_dim {
+    group_label: "Question Information"
+    label: "Question Selector 1"
+    description: "To be used with the Question Selector filters"
+    label_from_parameter: question_selector1
+    sql: ${TABLE}.{% parameter question_selector1 %};;
   }
 
   measure: unwtct {
