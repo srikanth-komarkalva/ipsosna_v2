@@ -39,7 +39,6 @@ view: tbl_facts_v2 {
       label: "brand_easy"
       value: "brand_easy"
     }
-
     allowed_value: {
       label: "brand_essential"
       value: "brand_essential"
