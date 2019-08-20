@@ -2,7 +2,7 @@ view: tbl_facts_v2 {
   sql_table_name: YouTubeB2B.tblFactsV2 ;;
 
 #Defining parameters for Dynamic column selection in Cross tab charts
-  parameter: Question_selector1 {
+  parameter: question_selector1 {
     label: "Question Selector 1"
     description: "Question selector for crosstabs"
     type: unquoted
@@ -105,13 +105,13 @@ view: tbl_facts_v2 {
   }
 
 
-  dimension: Question_selector1_dim {
+  dimension: question_selector1_dim {
     group_label: "Select Question to Filter"
     label: "Question Selector 1"
 #   order_by_field: attribute_selector1_sort
     description: "To be used with the Question Selector filters"
-    label_from_parameter: Question_selector1
-    sql: ${TABLE}.{% parameter Question_selector1 %};;
+    label_from_parameter: question_selector1
+    sql: ${TABLE}.{% parameter question_selector1 %};;
   }
 
 
