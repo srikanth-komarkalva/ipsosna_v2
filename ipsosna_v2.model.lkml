@@ -28,12 +28,12 @@ explore: tbl_facts_v2 {
     relationship: many_to_one
     sql_on: ${tbl_facts_v2.category_id} = ${tbl_categories_v2.category_id} ;;
   }
-#   join: tbl_variables_categories_v2 {
-#     view_label: "YouTube Data"
-#     type: inner
-#     relationship: many_to_one
-#     sql_on: ${tbl_facts_v2.category_id} = ${tbl_variables_categories_v2.variable_id} ;;
-#   }
+  join: tbl_variables_v2 {
+     view_label: "YouTube Data"
+     type: inner
+     relationship: many_to_one
+     sql_on: ${tbl_facts_v2.category_id} = ${tbl_variables_v2.category_id} ;;
+  }
 
   join: bases {
     view_label: "YouTube Data"
