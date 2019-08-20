@@ -5,7 +5,7 @@ view: tbl_facts_v2 {
   parameter: question_selector1 {
     label: "Question Selector 1"
     description: "Question selector for crosstabs"
-    type: string
+    type: unquoted
 
     allowed_value: {
       label: "brand_ad_placement_you_tube"
