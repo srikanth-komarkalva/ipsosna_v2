@@ -1,6 +1,120 @@
 view: tbl_facts_v2 {
   sql_table_name: YouTubeB2B.tblFactsV2 ;;
 
+#Defining parameters for Dynamic column selection in Cross tab charts
+  parameter: Question_selector1 {
+    label: "Question Selector 1"
+    description: "Question selector for crosstabs"
+    type: unquoted
+
+    allowed_value: {
+      label: "brand_ad_placement_you_tube"
+      value: "brand_ad_placement_you_tube"
+    }
+    allowed_value: {
+      label: "brand_ad_results"
+      value: "brand_ad_results"
+    }
+    allowed_value: {
+      label: "brand_audiences"
+      value: "brand_audiences"
+    }
+    allowed_value: {
+      label: "brand_biz_results"
+      value: "brand_biz_results"
+    }
+    allowed_value: {
+      label: "brand_channels"
+      value: "brand_channels"
+    }
+    allowed_value: {
+      label: "brand_consider"
+      value: "brand_consider"
+    }
+    allowed_value: {
+      label: "brand_content"
+      value: "brand_content"
+    }
+    allowed_value: {
+      label: "brand_easy"
+      value: "brand_easy"
+    }
+
+    allowed_value: {
+      label: "brand_essential"
+      value: "brand_essential"
+    }
+    allowed_value: {
+      label: "brand_fam"
+      value: "brand_fam"
+    }
+    allowed_value: {
+      label: "brand_fam_net"
+      value: "brand_fam_net"
+    }
+    allowed_value: {
+      label: "brand_import_ad_results"
+      value: "brand_import_ad_results"
+    }
+    allowed_value: {
+      label: "brand_import_audiences"
+      value: "brand_import_audiences"
+    }
+    allowed_value: {
+      label: "brand_import_biz_results"
+      value: "brand_import_biz_results"
+    }
+    allowed_value: {
+      label: "brand_import_channels"
+      value: "brand_import_channels"
+    }
+    allowed_value: {
+      label: "brand_import_content"
+      value: "brand_import_content"
+    }
+
+
+    allowed_value: {
+      label: "brand_import_easy"
+      value: "brand_import_easy"
+    }
+    allowed_value: {
+      label: "brand_import_trust"
+      value: "brand_import_trust"
+    }
+    allowed_value: {
+      label: "brand_most_essential"
+      value: "brand_most_essential"
+    }
+    allowed_value: {
+      label: "brand_prefer"
+      value: "brand_prefer"
+    }
+    allowed_value: {
+      label: "brand_purchase"
+      value: "brand_purchase"
+    }
+    allowed_value: {
+      label: "brand_spend"
+      value: "brand_spend"
+    }
+    allowed_value: {
+      label: "brand_trust"
+      value: "brand_trust"
+    }
+  }
+
+
+  dimension: Question_selector1_dim {
+    group_label: "Select Question to Filter"
+    label: "Question Selector 1"
+#   order_by_field: attribute_selector1_sort
+    description: "To be used with the Question Selector filters"
+    label_from_parameter: Question_selector1
+    sql: ${TABLE}.{% parameter Question_selector1 %};;
+  }
+
+
   dimension: brand_ad_placement_you_tube {
     group_label: "Question Information"
     type: string
