@@ -28,4 +28,11 @@ view: tbl_variables_v2
     sql: ${TABLE}.CategoryId ;;
   }
 
+  dimension: question {
+    group_label: "Question Information"
+    description: "Concatenation of Variable ID and Variable Label"
+    type: string
+    sql: concat(${Variable_Id},' ',${Variable_Label}) ;;
+  }
+
 }
