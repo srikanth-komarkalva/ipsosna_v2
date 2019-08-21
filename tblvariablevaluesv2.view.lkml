@@ -139,7 +139,7 @@ view: tblvariablevaluesv2 {
     sql: ${TABLE}.VariableId ;;
   }
 
-  dimension: category_id {
+  dimension: category_id_v2 {
     group_label: "Question Information"
     hidden: yes
     primary_key: yes

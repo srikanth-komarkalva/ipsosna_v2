@@ -38,7 +38,7 @@ explore: tbl_facts_v2 {
     view_label: "YouTube Data"
     type: inner
     relationship: many_to_one
-    sql_on: ${tbl_facts_v2.category_id} = ${tblvariablevaluesv2.category_id} ;;
+    sql_on: ${tbl_facts_v2.category_id} = ${tblvariablevaluesv2.category_id_v2} ;;
   }
 
   join: bases {
