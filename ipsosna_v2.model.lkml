@@ -167,6 +167,7 @@ explore: tbl_facts_v2 {
       sql_where: ${tbl_facts_v2.category_id} in (
         SELECT facts.CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tblFactsV2` facts
       ) ;;
+      fields: [value_1]
     }
   join: dynamic_2 {
     from: v_by_v_crosstab
@@ -177,5 +178,6 @@ explore: tbl_facts_v2 {
     sql_where: ${tbl_facts_v2.category_id} in (
         SELECT facts.CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tblFactsV2` facts
       ) ;;
+    fields: [value_2]
   }
 }
