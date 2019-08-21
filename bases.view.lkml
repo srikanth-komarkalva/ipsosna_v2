@@ -110,7 +110,7 @@ view: bases {
 
                    FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tbl_facts_v2` facts
                    JOIN `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tbl_demographics_v2` demos ON demos.Unique_ID=facts.Unique_ID
-                   JOIN `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tbl_variables_categories_v2` vm ON vm.CategoryID=facts.CategoryID
+                   JOIN `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tblVariablesCategoriesV2` vm ON vm.CategoryID=facts.CategoryID
                    JOIN `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tbl_categories_v2` cm ON cm.CategoryId=facts.CategoryID
 
                    WHERE
