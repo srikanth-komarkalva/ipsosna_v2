@@ -151,3 +151,31 @@ explore: tbl_facts_v2 {
             ;;
   }
 }
+
+ explore: youtube_data_crosstab {
+    extends: [tbl_facts_v2]
+    view_label: "Crosstab Value selector"
+    fields: [ALL_FIELDS*]
+    label: "Survey Data for Q-by-Q Crosstab"
+    view_name: tbl_facts_v2
+    join: dynamic_1 {
+      from: v_by_v_crosstab
+      view_label: "Crosstab Question Selector"
+      relationship: one_to_one
+      sql_on: ${dynamic_1.category_id} = ${tbl_facts_v2.category_id}
+       AND {% condition dynamic_1.value_1 %} ${dynamic_1.value} {% endcondition %} ;;
+      sql_where: ${tbl_facts_v2.category_id} in (
+        SELECT facts.CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tblFactsV2` facts
+      ) ;;
+    }
+  join: dynamic_2 {
+    from: v_by_v_crosstab
+    view_label: "Crosstab Question Selector"
+    relationship: one_to_one
+    sql_on: ${dynamic_2.category_id} = ${tbl_facts_v2.category_id}
+      AND {% condition dynamic_2.value_2 %} ${dynamic_2.value} {% endcondition %} ;;
+    sql_where: ${tbl_facts_v2.category_id} in (
+        SELECT facts.CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tblFactsV2` facts
+      ) ;;
+  }
+}
