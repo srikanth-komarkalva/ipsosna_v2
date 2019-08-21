@@ -33,7 +33,7 @@ view: tbl_variables_v2
     description: "Concatenation of Variable ID and Variable Label"
     hidden: yes
     type: string
-    sql: concat(${Variable_Id},' ',${Variable_Label}) ;;
+    sql: concat(tbl_variables_values_v2.variable_Id,' ',${Variable_Label}) ;;
   }
 
 }
