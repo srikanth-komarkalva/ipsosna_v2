@@ -152,7 +152,8 @@ explore: tbl_facts_v2 {
   }
 }
 
- explore: youtube_data_crosstab {
+ explore: youtube_data_crosstab
+{
     extends: [tbl_facts_v2]
     view_label: "Crosstab Value selector"
     fields: [ALL_FIELDS*]
@@ -163,7 +164,8 @@ explore: tbl_facts_v2 {
       view_label: "Crosstab Value Selector"
       relationship: one_to_one
       sql_on: ${dynamic_1.category_id} = ${tbl_facts_v2.category_id}
-       AND {% condition dynamic_1.value_1 %} ${dynamic_1.value} {% endcondition %} ;;
+              AND {% condition dynamic_1.value_1 %} ${dynamic_1.value} {% endcondition %} ;;
+
       sql_where: ${tbl_facts_v2.category_id} in (
         SELECT facts.CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tblFactsV2` facts
       ) ;;
