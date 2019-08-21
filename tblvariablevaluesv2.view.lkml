@@ -144,7 +144,7 @@ view: tblvariablevaluesv2 {
     hidden: yes
     primary_key: yes
     type: string
-    sql: tbl_facts_v2.Category_ID ;;
+    sql: tbl_facts_v2.category_id ;;
   }
 
   set: detail {
