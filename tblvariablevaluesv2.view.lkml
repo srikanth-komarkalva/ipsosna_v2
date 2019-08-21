@@ -134,17 +134,17 @@ view: tblvariablevaluesv2 {
   dimension: variable_id {
     group_label: "Question Information"
     label: "Variable ID"
-    hidden: yes
+#     hidden: yes
     type: string
     sql: ${TABLE}.VariableId ;;
   }
 
-  dimension: unique_id {
+  dimension: category_id {
     group_label: "Question Information"
     hidden: yes
     primary_key: yes
-    type: number
-    sql: tbl_facts_v2.Unique_ID ;;
+    type: string
+    sql: tbl_facts_v2.Category_ID ;;
   }
 
   set: detail {
