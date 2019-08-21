@@ -101,7 +101,6 @@ view: tbl_facts_v2 {
     }
   }
 
-
   dimension: brand_ad_placement_you_tube {
     group_label: "Question Information"
     type: string

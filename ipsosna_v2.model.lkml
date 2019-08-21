@@ -51,7 +51,7 @@ explore: tbl_facts_v2 {
                 -- all tbl_variables_categories_v2 fields
                 {% if tbl_variables_categories_v2.variable_id._is_selected %} AND ${tbl_variables_categories_v2.variable_id} = ${bases.variable_id} {% endif %}
 
-                -- all tbl_categories_v2 fields
+               -- all tbl_categories_v2 fields
                 {% if tbl_categories_v2.category_id._is_selected or tbl_facts_v2.category_id._is_selected %} AND ${tbl_categories_v2.category_id} = ${bases.category_id} {% endif %}
                 {% if tbl_categories_v2.category_label._is_selected %} AND ${tbl_categories_v2.category_label} = ${bases.category_label} {% endif %}
 

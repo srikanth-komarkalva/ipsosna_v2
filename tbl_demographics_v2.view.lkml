@@ -576,6 +576,8 @@ view: tbl_demographics_v2 {
                        -- all tbl_facts_v2 fields
                           {% if tbl_facts_v2.category_id._is_selected %} ${tbl_facts_v2.category_id}, {% endif %}
 
+                          {% if tbl_variables_values_v2.variable_id._is_selected %} ${tbl_variables_values_v2.variable_id}, {% endif %}
+
                           -- all demographic_fact fields
                           {% if attribute_selector1._parameter_value == 'campaign_type' and attribute_selector1_dim._is_selected %}
                             ${campaign_type} ,
