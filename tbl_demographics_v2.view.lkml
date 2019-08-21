@@ -558,9 +558,9 @@ view: tbl_demographics_v2 {
 
   measure: pct_wtct {
     group_label: "Weight Metrics"
-    hidden: yes
+#     hidden: yes
     description: "The weighted count of respondents as a percent of all response values"
-    label: "Percent of Base"
+    label: "Percent of Base Old calc"
     type: number
     sql: ${wtct}/${bases.min_wtbase} ;;
     value_format_name: percent_0
@@ -573,7 +573,7 @@ view: tbl_demographics_v2 {
     hidden: yes
     sql:  sum(${wtct}) OVER ( PARTITION BY
 
-                       -- all measure_fact fields
+                       -- all tbl_facts_v2 fields
                           {% if tbl_facts_v2.category_id._is_selected %} ${tbl_facts_v2.category_id}, {% endif %}
 
                           -- all demographic_fact fields
