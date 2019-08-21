@@ -24,6 +24,7 @@ view: tbl_variables_categories_v2 {
   dimension: variable_id {
     group_label: "Question Information"
     primary_key: yes
+    hidden: yes
     type: string
     sql: ${TABLE}.VariableID ;;
   }

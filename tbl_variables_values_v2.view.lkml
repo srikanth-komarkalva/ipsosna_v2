@@ -119,6 +119,7 @@ view: tbl_variables_values_v2 {
   }
 
   measure: count {
+    hidden: yes
     type: count
     drill_fields: [detail*]
   }
@@ -133,7 +134,7 @@ view: tbl_variables_values_v2 {
   dimension: variable_id {
     group_label: "Question Information"
     label: "Variable ID"
-    hidden: yes
+#     hidden: yes
     type: string
     sql: ${TABLE}.VariableId ;;
   }
