@@ -156,7 +156,7 @@ explore: tbl_facts_v2 {
     extends: [tbl_facts_v2]
     view_label: "Crosstab Value selector"
     fields: [ALL_FIELDS*]
-    label: "Survey Data for Q-by-Q Crosstab"
+    label: "YouTube Data for Crosstab (Value filter)"
     view_name: tbl_facts_v2
     join: dynamic_1 {
       from: v_by_v_crosstab
