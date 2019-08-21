@@ -160,7 +160,7 @@ explore: tbl_facts_v2 {
     view_name: tbl_facts_v2
     join: dynamic_1 {
       from: v_by_v_crosstab
-      view_label: "Crosstab Question Selector"
+      view_label: "Crosstab Value Selector"
       relationship: one_to_one
       sql_on: ${dynamic_1.category_id} = ${tbl_facts_v2.category_id}
        AND {% condition dynamic_1.value_1 %} ${dynamic_1.value} {% endcondition %} ;;
@@ -170,7 +170,7 @@ explore: tbl_facts_v2 {
     }
   join: dynamic_2 {
     from: v_by_v_crosstab
-    view_label: "Crosstab Question Selector"
+    view_label: "Crosstab Value Selector"
     relationship: one_to_one
     sql_on: ${dynamic_2.category_id} = ${tbl_facts_v2.category_id}
       AND {% condition dynamic_2.value_2 %} ${dynamic_2.value} {% endcondition %} ;;
