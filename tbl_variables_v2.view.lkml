@@ -31,7 +31,7 @@ view: tbl_variables_v2
   dimension: question {
     group_label: "Question Information"
     description: "Concatenation of Variable ID and Variable Label"
-    hidden: yes
+#     hidden: yes
     type: string
     sql: concat(tbl_variables_values_v2.variable_Id,' ',${Variable_Label}) ;;
   }
