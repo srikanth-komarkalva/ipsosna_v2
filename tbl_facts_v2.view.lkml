@@ -212,7 +212,7 @@ view: tbl_facts_v2 {
   dimension: brand_most_essential {
     group_label: "Question Information"
     type: string
-    sql: ${TABLE}.Brand_MostEssential ;;
+    sql: ${TABLE}.Brand_Most_Essential ;;
   }
 
   dimension: brand_most_essential_1 {
