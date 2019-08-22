@@ -107,11 +107,11 @@ view: tbl_facts_v2 {
     sql: ${TABLE}.Brand_Ad_Placement_YouTube ;;
   }
 
-  dimension: brand_ad_results {
-    group_label: "Question Information"
-    type: string
-    sql: ${TABLE}.Brand_AdResults ;;
-  }
+#   dimension: brand_ad_results {
+#     group_label: "Question Information"
+#     type: string
+#     sql: ${TABLE}.Brand_AdResults ;;
+#   }
 
   dimension: brand_audiences {
     group_label: "Question Information"

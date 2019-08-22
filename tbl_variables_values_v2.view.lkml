@@ -18,8 +18,6 @@ view: tbl_variables_values_v2 {
       union all
       select distinct Brand_Audiences as Value, "Brand_Audiences" as VariableId ,CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.FactsV2` where Brand_Audiences <> ' '
       union all
-      select distinct Brand_AdResults as Value, "Brand_AdResults" as VariableId ,CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.FactsV2` where Brand_AdResults <> ' '
-      union all
       select distinct Brand_BizResults as Value, "Brand_BizResults" as VariableId ,CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.FactsV2` where Brand_BizResults <> ' '
       union all
       select distinct Brand_Trust as Value, "Brand_Trust" as VariableId ,CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.FactsV2` where Brand_Trust <> ' '
