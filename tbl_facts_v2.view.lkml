@@ -79,10 +79,10 @@ view: tbl_facts_v2 {
       label: "Brand Import Trust"
       value: "Brand_Import_Trust"
     }
-    allowed_value: {
-      label: "Brand Most Essential"
-      value: "Brand_Most_Essential"
-    }
+#     allowed_value: {
+#       label: "Brand Most Essential"
+#       value: "Brand_Most_Essential"
+#     }
     allowed_value: {
       label: "Brand Prefer"
       value: "Brand_Prefer"
@@ -209,11 +209,11 @@ view: tbl_facts_v2 {
     sql: ${TABLE}.Brand_Import_Trust ;;
   }
 
-  dimension: brand_most_essential {
-    group_label: "Question Information"
-    type: string
-    sql: ${TABLE}.Brand_Most_Essential ;;
-  }
+#   dimension: brand_most_essential {
+#     group_label: "Question Information"
+#     type: string
+#     sql: ${TABLE}.Brand_Most_Essential ;;
+#   }
 
   dimension: brand_most_essential_1 {
     group_label: "Question Information"
