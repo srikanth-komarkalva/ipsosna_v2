@@ -1,5 +1,5 @@
 view: tbl_variables_categories_v2 {
-  sql_table_name: YouTubeB2B.tblVariablesCategoriesV2 ;;
+  sql_table_name: YouTubeB2B.VariablesCategoriesV2 ;;
 
   dimension: category_id {
     group_label: "Question Information"

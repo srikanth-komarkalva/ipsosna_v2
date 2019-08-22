@@ -1,5 +1,5 @@
 view: tbl_demographics_v2 {
-  sql_table_name: YouTubeB2B.tblDemographicsV2 ;;
+  sql_table_name: YouTubeB2B.DemographicsV2 ;;
 
 #Defining parameters for Dynamic column selection in Cross tab charts
   parameter: attribute_selector1 {

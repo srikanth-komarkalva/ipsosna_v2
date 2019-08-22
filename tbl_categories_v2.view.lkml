@@ -1,5 +1,5 @@
 view: tbl_categories_v2 {
-  sql_table_name: YouTubeB2B.tblCategoriesV2 ;;
+  sql_table_name: YouTubeB2B.CategoriesV2 ;;
 
   dimension: category_id {
     primary_key: yes
