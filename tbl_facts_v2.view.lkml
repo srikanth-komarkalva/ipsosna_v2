@@ -81,7 +81,7 @@ view: tbl_facts_v2 {
     }
     allowed_value: {
       label: "Brand Most Essential"
-      value: "Brand_MostEssential"
+      value: "Brand_Most_Essential"
     }
     allowed_value: {
       label: "Brand Prefer"
