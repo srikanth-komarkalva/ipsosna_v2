@@ -3,7 +3,7 @@ view: tbl_facts_v2 {
 
 #Defining parameters for Dynamic column selection in Cross tab charts
   parameter: question_selector1 {
-    label: "Question Selector 1"
+    label: "Question Selector"
     description: "Question selector for crosstabs"
     type: unquoted
 
@@ -466,7 +466,7 @@ view: tbl_facts_v2 {
 
   dimension: question_selector1_dim {
     group_label: "Question Information"
-    label: "Question Selector 1"
+    label: "Question Selector"
     description: "To be used with the Question Selector filters"
     label_from_parameter: question_selector1
     sql: ${TABLE}.{% parameter question_selector1 %};;

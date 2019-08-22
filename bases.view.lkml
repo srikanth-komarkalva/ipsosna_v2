@@ -626,12 +626,14 @@ view: bases {
 
   dimension: unwtbase {
     group_label: "% Weight Denominators"
+    hidden: yes
     label: "Unweighted Base"
     sql: ${TABLE}.unwtbase ;;
   }
 
   dimension: wtbase {
     group_label: "% Weight Denominators"
+    hidden: yes
     type: number
     label: "Weighted Base"
     sql: ${TABLE}.wtbase ;;

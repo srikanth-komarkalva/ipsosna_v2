@@ -3,7 +3,7 @@ view: tbl_demographics_v2 {
 
 #Defining parameters for Dynamic column selection in Cross tab charts
   parameter: attribute_selector1 {
-    label: "Banner Selector 1"
+    label: "Demographic Banner Selector 1"
     description: "Banner selector for crosstabs"
     type: unquoted
 
@@ -43,7 +43,7 @@ view: tbl_demographics_v2 {
 
   parameter: attribute_selector2 {
     description: "Banner selector for crosstabs"
-    label: "Banner Selector 2"
+    label: "Demographic Banner Selector 2"
     type: unquoted
 
     allowed_value: {
@@ -558,7 +558,7 @@ view: tbl_demographics_v2 {
 
   measure: pct_wtct {
     group_label: "Weight Metrics"
-#     hidden: yes
+    hidden: yes
     description: "The weighted count of respondents as a percent of all response values"
     label: "Percent of Base Old calc"
     type: number
