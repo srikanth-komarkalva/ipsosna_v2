@@ -167,7 +167,7 @@ explore: tbl_facts_v2 {
               AND {% condition dynamic_1.value_1 %} ${dynamic_1.value} {% endcondition %} ;;
 
       sql_where: ${tbl_facts_v2.category_id} in (
-        SELECT facts.CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tblFactsV2` facts
+        SELECT facts.CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.FactsV2` facts
       ) ;;
       fields: [value_1]
     }
@@ -178,7 +178,7 @@ explore: tbl_facts_v2 {
     sql_on: ${dynamic_2.category_id} = ${tbl_facts_v2.category_id}
       AND {% condition dynamic_2.value_2 %} ${dynamic_2.value} {% endcondition %} ;;
     sql_where: ${tbl_facts_v2.category_id} in (
-        SELECT facts.CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.tblFactsV2` facts
+        SELECT facts.CategoryId FROM `mgcp-1192365-ipsos-gbht-srf617.YouTubeB2B.FactsV2` facts
       ) ;;
     fields: [value_2]
   }
