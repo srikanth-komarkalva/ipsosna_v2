@@ -760,6 +760,7 @@ view: tbl_facts_v2 {
   dimension: perf_trust {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_trust_sort
     sql: ${TABLE}.Perf_Trust ;;
   }
 
