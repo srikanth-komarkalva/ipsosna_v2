@@ -2,6 +2,7 @@ view: tbl_facts_v2 {
   sql_table_name: YouTubeB2B.FactsV2 ;;
 
   dimension: brand_ad_placement {
+    group_label: "Question Information"
     type: string
     order_by_field: brand_ad_placement_sort
     sql: ${TABLE}.Brand_Ad_Placement ;;
