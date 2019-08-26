@@ -685,7 +685,7 @@ view: tbl_facts_v2 {
           WHEN 'Satisfied' THEN 1
           WHEN 'Neither satisfied nor dissatisfied' THEN 2
           WHEN 'Dissatisfied' THEN 3
-          WHEN 'Dont Know' THEN 4
+          WHEN 'Dont know' THEN 4
           WHEN 'Not Asked' THEN 5
           END
           ;;
