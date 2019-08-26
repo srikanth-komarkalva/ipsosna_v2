@@ -1,6 +1,161 @@
 view: tbl_facts_v2 {
   sql_table_name: YouTubeB2B.FactsV2 ;;
 
+
+  parameter: question_selector1 {
+    label: "Question Selector"
+    description: "Question selector for crosstabs"
+    type: unquoted
+
+    allowed_value: {
+      label: "Brand Ad Placement"
+      value: "Brand_Ad_Placement"
+    }
+    allowed_value: {
+      label: "Brand Ad Results"
+      value: "Brand_Ad_Results"
+    }
+    allowed_value: {
+      label: "Brand Audiences"
+      value: "Brand_Audiences"
+    }
+    allowed_value: {
+      label: "Brand Biz Results"
+      value: "Brand_Biz_Results"
+    }
+    allowed_value: {
+      label: "Brand Channels"
+      value: "Brand_Channels"
+    }
+    allowed_value: {
+      label: "Brand Consider"
+      value: "Brand_Consider"
+    }
+    allowed_value: {
+      label: "Brand Content"
+      value: "Brand_Content"
+    }
+    allowed_value: {
+      label: "Brand Easy"
+      value: "Brand_Easy"
+    }
+    allowed_value: {
+      label: "Brand Essential"
+      value: "Brand_Essential"
+    }
+    allowed_value: {
+      label: "Brand Fam"
+      value: "Brand_Fam"
+    }
+    allowed_value: {
+      label: "Brand Fam Net"
+      value: "Brand_Fam_Net"
+    }
+    allowed_value: {
+      label: "Brand Import"
+      value: "Brand_Import"
+    }
+    allowed_value: {
+      label: "Brand Most Essential"
+      value: "Brand_Most_Essential"
+    }
+    allowed_value: {
+      label: "Brand Purchase"
+      value: "Brand_Purchase"
+    }
+    allowed_value: {
+      label: "Brand Spend"
+      value: "Brand_Spend"
+    }
+    allowed_value: {
+      label: "Brand Trust"
+      value: "Brand_Trust"
+    }
+    allowed_value: {
+      label: "Perf Consider"
+      value: "Perf_Consider"
+    }
+    allowed_value: {
+      label: "Perf Essential"
+      value: "Perf_Essential"
+    }
+    allowed_value: {
+      label: "Perf Fam"
+      value: "Perf_Fam"
+    }
+    allowed_value: {
+      label: "Perf Import"
+      value: "Perf_Import"
+    }
+    allowed_value: {
+      label: "Perf In Store"
+      value: "Perf_In_Store"
+    }
+    allowed_value: {
+      label: "Perf Insights"
+      value: "Perf_Insights"
+    }
+    allowed_value: {
+      label: "Perf Measure"
+      value: "Perf_Measure"
+    }
+    allowed_value: {
+      label: "Perf Moments"
+      value: "Perf_Moments"
+    }
+    allowed_value: {
+      label: "Perf Most Essential"
+      value: "Perf_Most_Essential"
+    }
+    allowed_value: {
+      label: "Perf Partner Goals"
+      value: "Perf_Partner_Goals"
+    }
+    allowed_value: {
+      label: "Perf Partner Growth"
+      value: "Perf_Partner_Growth"
+    }
+    allowed_value: {
+      label: "Perf Preferred"
+      value: "Perf_Preferred"
+    }
+    allowed_value: {
+      label: "Perf Privacy"
+      value: "Perf_Privacy"
+    }
+    allowed_value: {
+      label: "Perf Purchase"
+      value: "Perf_Purchase"
+    }
+    allowed_value: {
+      label: "Perf ROI"
+      value: "Perf_ROI"
+    }
+    allowed_value: {
+      label: "Perf Satisfaction"
+      value: "Perf_Satisfaction"
+    }
+
+    allowed_value: {
+      label: "Perf Spend"
+      value: "Perf_Spend"
+    }
+    allowed_value: {
+      label: "Perf Target"
+      value: "Perf_Target"
+    }
+    allowed_value: {
+      label: "Perf Top Priority"
+      value: "Perf_Top_Priority"
+    }
+    allowed_value: {
+      label: "Perf Trust"
+      value: "Perf_Trust"
+    }
+
+
+  }
+
   dimension: brand_ad_placement {
     group_label: "Question Information"
     type: string
@@ -150,7 +305,6 @@ view: tbl_facts_v2 {
           END
           ;;
   }
-
 
   dimension: brand_easy {
     group_label: "Question Information"
