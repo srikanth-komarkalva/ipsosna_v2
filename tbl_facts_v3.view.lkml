@@ -1,4 +1,4 @@
-view: tbl_facts_v2 {
+view: tbl_facts_v3 {
   sql_table_name: YouTubeB2B.FactsV2 ;;
 
 #Defining parameters for Dynamic column selection in Cross tab charts
