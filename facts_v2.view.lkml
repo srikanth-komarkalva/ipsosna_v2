@@ -460,8 +460,8 @@ view: tbl_facts_v2 {
     hidden: yes
     sql: CASE ${brand_spend}
           WHEN 'Increase' THEN 1
-          WHEN 'Decrease' THEN 2
-          WHEN 'Stay the same' THEN 3
+          WHEN 'Stay the same' THEN 2
+          WHEN 'Decrease' THEN 3
           WHEN 'Dont Know' THEN 4
           WHEN 'Not Asked' THEN 5
           END
@@ -858,8 +858,8 @@ view: tbl_facts_v2 {
     hidden: yes
     sql: CASE ${perf_spend}
           WHEN 'Increase' THEN 1
-          WHEN 'Decrease' THEN 2
-          WHEN 'Stay the same' THEN 3
+          WHEN 'Stay the same' THEN 2
+          WHEN 'Decrease' THEN 3
           WHEN 'Dont Know' THEN 4
           WHEN 'Not Asked' THEN 5
           END
