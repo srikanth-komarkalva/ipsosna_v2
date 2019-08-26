@@ -940,6 +940,14 @@ view: tbl_facts_v2 {
     sql: ${TABLE}.Unique_ID ;;
   }
 
+  dimension: question_selector1_dim {
+    group_label: "Question Information"
+    label: "Question Selector"
+    description: "To be used with the Question Selector filters"
+    label_from_parameter: question_selector1
+    sql: ${TABLE}.{% parameter question_selector1 %};;
+  }
+
   measure: unwtct {
     group_label: "Weight Metrics"
     description: "The count of respondents"
