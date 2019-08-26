@@ -424,7 +424,7 @@ view: tbl_facts_v2 {
   dimension: perf_import_sort {
     type: number
     hidden: yes
-    sql: CASE ${perf_import}_import}
+    sql: CASE ${perf_import}
           WHEN 'Extremely important' THEN 1
           WHEN 'Very important' THEN 2
           WHEN 'Somewhat important' THEN 3
