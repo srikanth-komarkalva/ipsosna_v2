@@ -353,121 +353,427 @@ view: tbl_facts_v2 {
   dimension: perf_consider {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_consider_sort
     sql: ${TABLE}.Perf_Consider ;;
+  }
+
+  dimension: perf_consider_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_consider}
+          WHEN 'Yes' THEN 1
+          WHEN 'No' THEN 2
+          WHEN 'Not Asked' THEN 3
+          END
+          ;;
   }
 
   dimension: perf_essential {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_essential_sort
     sql: ${TABLE}.Perf_Essential ;;
+  }
+
+  dimension: perf_essential_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_essential}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_fam {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_fam_sort
     sql: ${TABLE}.Perf_Fam ;;
   }
+
+  dimension: perf_fam_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_fam}
+          WHEN 'Extremely familiar' THEN 1
+          WHEN 'Very familiar' THEN 2
+          WHEN 'Somewhat familiar' THEN 3
+          WHEN 'Not very familiar' THEN 4
+          WHEN 'Not at all familiar / Never heard of' THEN 5
+          WHEN 'Not Asked' THEN 6
+          END
+          ;;
+  }
+
 
   dimension: perf_import {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_import_sort
     sql: ${TABLE}.Perf_Import ;;
   }
+
+  dimension: perf_import_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_import}_import}
+          WHEN 'Extremely important' THEN 1
+          WHEN 'Very important' THEN 2
+          WHEN 'Somewhat important' THEN 3
+          WHEN 'Not very important' THEN 4
+          WHEN 'Not at all important' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
+  }
+
 
   dimension: perf_in_store {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_in_store_sort
     sql: ${TABLE}.Perf_In_Store ;;
+  }
+
+  dimension: perf_in_store_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_in_store}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_insights {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_insights_sort
     sql: ${TABLE}.Perf_Insights ;;
+  }
+
+  dimension: perf_insights_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_insights}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_measure {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_measure_sort
     sql: ${TABLE}.Perf_Measure ;;
+  }
+
+  dimension: perf_measure_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_measure}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_moments {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_moments_sort
     sql: ${TABLE}.Perf_Moments ;;
+  }
+
+  dimension: perf_moments_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_moments}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_most_essential {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_most_essential_sort
     sql: ${TABLE}.Perf_Most_Essential ;;
+  }
+
+  dimension: perf_most_essential_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_most_essential}
+          WHEN 'Most Essential' THEN 1
+          WHEN 'Second Most Essential' THEN 2
+          WHEN 'Not Asked' THEN 3
+          END
+          ;;
   }
 
   dimension: perf_partner_goals {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_partner_goals_sort
     sql: ${TABLE}.Perf_Partner_Goals ;;
+  }
+
+  dimension: perf_partner_goals_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_partner_goals}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_partner_growth {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_partner_growth_sort
     sql: ${TABLE}.Perf_Partner_Growth ;;
+  }
+
+  dimension: perf_partner_growth_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_partner_growth}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_preferred {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_preferred_sort
     sql: ${TABLE}.Perf_Preferred ;;
+  }
+
+  dimension: perf_preferred_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_preferred}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_privacy {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_privacy_sort
     sql: ${TABLE}.Perf_Privacy ;;
+  }
+
+  dimension: perf_privacy_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_privacy}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_purchase {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_purchase_sort
     sql: ${TABLE}.Perf_Purchase ;;
+  }
+
+  dimension: perf_purchase_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_purchase}
+          WHEN 'Yes' THEN 1
+          WHEN 'No' THEN 2
+          WHEN 'Not Asked' THEN 3
+          END
+          ;;
   }
 
   dimension: perf_roi {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_roi_sort
     sql: ${TABLE}.Perf_ROI ;;
+  }
+
+  dimension: perf_roi_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_roi}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_satisfaction {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_satisfaction_sort
     sql: ${TABLE}.Perf_Satisfaction ;;
   }
+
+  dimension: perf_satisfaction_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_satisfaction}
+          WHEN 'Satisfied' THEN 1
+          WHEN 'Neither satisfied nor dissatisfied' THEN 2
+          WHEN 'Dissatisfied' THEN 3
+          WHEN 'Dont Know' THEN 4
+          WHEN 'Not Asked' THEN 5
+          END
+          ;;
+  }
+
 
   dimension: perf_spend {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_spend_sort
     sql: ${TABLE}.Perf_Spend ;;
+  }
+
+  dimension: perf_spend_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_spend}
+          WHEN 'Increase' THEN 1
+          WHEN 'Decrease' THEN 2
+          WHEN 'Stay the same' THEN 3
+          WHEN 'Dont Know' THEN 4
+          WHEN 'Not Asked' THEN 5
+          END
+          ;;
   }
 
   dimension: perf_target {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_target_sort
     sql: ${TABLE}.Perf_Target ;;
+  }
+
+  dimension: perf_target_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_target}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: perf_top_priority {
     group_label: "Question Information"
     type: string
+    order_by_field: perf_top_priority_sort
     sql: ${TABLE}.Perf_Top_Priority ;;
   }
+
+  dimension: perf_top_priority_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_top_priority}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
+  }
+
 
   dimension: perf_trust {
     group_label: "Question Information"
     type: string
     sql: ${TABLE}.Perf_Trust ;;
+  }
+
+  dimension: perf_trust_sort {
+    type: number
+    hidden: yes
+    sql: CASE ${perf_trust}
+          WHEN 'Strongly agree' THEN 1
+          WHEN 'Agree' THEN 2
+          WHEN 'Neither agree nor disagree' THEN 3
+          WHEN 'Disagree' THEN 4
+          WHEN 'Strongly disagree' THEN 5
+          WHEN 'Dont Know' THEN 6
+          WHEN 'Not Asked' THEN 7
+          END
+          ;;
   }
 
   dimension: unique_id {
