@@ -254,6 +254,14 @@ view: tbl_facts_v2 {
     sql: ${TABLE}.Unique_ID ;;
   }
 
+  measure: unwtct {
+    group_label: "Weight Metrics"
+    description: "The count of respondents"
+    label: "Unweighted Count"
+    type: count_distinct
+    sql: ${unique_id} ;;
+  }
+
   measure: count {
     type: count
     hidden: yes
