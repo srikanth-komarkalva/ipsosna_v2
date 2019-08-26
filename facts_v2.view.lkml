@@ -406,7 +406,9 @@ view: tbl_facts_v2 {
           WHEN 'Somewhat familiar' THEN 3
           WHEN 'Not very familiar' THEN 4
           WHEN 'Not at all familiar / Never heard of' THEN 5
-          WHEN 'Not Asked' THEN 6
+          WHEN 'Yes' THEN 6
+          WHEN 'No' THEN 7
+          WHEN 'Not Asked' THEN 8
           END
           ;;
   }
