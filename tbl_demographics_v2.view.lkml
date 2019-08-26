@@ -492,58 +492,58 @@ view: tbl_demographics_v2 {
     sql: ${TABLE}.{% parameter attribute_selector2 %};;
   }
 
-  parameter: significance_dropdown {
-    label: "Significance"
-    description: "Choose Significance for crosstabs"
-    type: string
-    allowed_value: {
-      label: "Yes"
-      value: "yes"
-    }
-    allowed_value: {
-      label: "No"
-      value: "no"
-    }
-  }
+#   parameter: significance_dropdown {
+#     label: "Significance"
+#     description: "Choose Significance for crosstabs"
+#     type: string
+#     allowed_value: {
+#       label: "Yes"
+#       value: "yes"
+#     }
+#     allowed_value: {
+#       label: "No"
+#       value: "no"
+#     }
+#   }
+#
+#   #Significance Filter
+#   dimension: significance_dropdown_dim {
+#     hidden: yes
+#     label: "Significance"
+#     type: string
+#     sql: {% parameter significance_dropdown  %};;
+#     #
+#   }
 
-  #Significance Filter
-  dimension: significance_dropdown_dim {
-    hidden: yes
-    label: "Significance"
-    type: string
-    sql: {% parameter significance_dropdown  %};;
-    #
-  }
-
-  parameter: confidence_interval {
-    label: "Confidence Interval Parameter"
-    description: "Choose Confidence % for crosstabs"
-    type: string
-    allowed_value: {
-      label: "85%"
-      value: "1.44"
-    }
-    allowed_value: {
-      label: "90%"
-      value: "1.65"
-    }
-    allowed_value: {
-      label: "95%"
-      value: "1.96"
-    }
-    allowed_value: {
-      label: "99%"
-      value: "2.58"
-    }
-  }
-
-  #Confidence Interval Filter
-  dimension: confidence_interval_dim {
-    label: "Confidence Interval"
-    hidden: yes
-    type: string
-    sql:  {% parameter confidence_interval  %};;
-  }
+#   parameter: confidence_interval {
+#     label: "Confidence Interval Parameter"
+#     description: "Choose Confidence % for crosstabs"
+#     type: string
+#     allowed_value: {
+#       label: "85%"
+#       value: "1.44"
+#     }
+#     allowed_value: {
+#       label: "90%"
+#       value: "1.65"
+#     }
+#     allowed_value: {
+#       label: "95%"
+#       value: "1.96"
+#     }
+#     allowed_value: {
+#       label: "99%"
+#       value: "2.58"
+#     }
+#   }
+#
+#   #Confidence Interval Filter
+#   dimension: confidence_interval_dim {
+#     label: "Confidence Interval"
+#     hidden: yes
+#     type: string
+#     sql:  {% parameter confidence_interval  %};;
+#   }
 
   measure: wtct{
     group_label: "Weight Metrics"
