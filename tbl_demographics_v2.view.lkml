@@ -562,7 +562,7 @@ view: tbl_demographics_v2 {
     description: "The weighted count of respondents as a percent of all response values"
     label: "Percent of Base Old calc"
     type: number
-    sql: ${wtct}/${bases.min_wtbase} ;;
+    sql: IFNULL(${wtct}/${bases.min_wtbase},0) ;;
     value_format_name: percent_0
 #     drill_fields: [country,region,wave,type_net,wtct,pct_wtct]
   }
