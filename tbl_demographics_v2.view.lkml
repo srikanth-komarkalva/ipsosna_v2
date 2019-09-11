@@ -170,19 +170,19 @@ view: tbl_demographics_v2 {
 
   dimension: media_mobile {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Media_Mobile ;;
   }
 
   dimension: media_none {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Media_None ;;
   }
 
   dimension: media_online {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Media_Online ;;
   }
 
@@ -194,19 +194,19 @@ view: tbl_demographics_v2 {
 
   dimension: media_outdoor {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Media_Outdoor ;;
   }
 
   dimension: media_print {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Media_Print ;;
   }
 
   dimension: media_radio {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Media_Radio ;;
   }
 
@@ -218,7 +218,7 @@ view: tbl_demographics_v2 {
 
   dimension: media_tv {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Media_TV ;;
   }
 
@@ -273,109 +273,109 @@ view: tbl_demographics_v2 {
 
   dimension: vertical_cpg {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_CPG ;;
   }
 
   dimension: vertical_entertainment {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Entertainment ;;
   }
 
   dimension: vertical_fashion {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Fashion ;;
   }
 
   dimension: vertical_finance {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Finance ;;
   }
 
   dimension: vertical_gaming {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Gaming ;;
   }
 
   dimension: vertical_gaming_consoles {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Gaming_Consoles ;;
   }
 
   dimension: vertical_gaming_mobile {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Gaming_Mobile ;;
   }
 
   dimension: vertical_gaming_other {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Gaming_Other ;;
   }
 
   dimension: vertical_gaming_pc {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Gaming_PC ;;
   }
 
   dimension: vertical_healthcare {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Healthcare ;;
   }
 
   dimension: vertical_home {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Home ;;
   }
 
   dimension: vertical_kids {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Kids ;;
   }
 
   dimension: vertical_other {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Other ;;
   }
 
   dimension: vertical_personal_care {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Personal_Care ;;
   }
 
   dimension: vertical_qsr {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_QSR ;;
   }
 
   dimension: vertical_retail {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Retail ;;
   }
 
   dimension: vertical_tech {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Tech ;;
   }
 
   dimension: vertical_travel {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Travel ;;
   }
 
