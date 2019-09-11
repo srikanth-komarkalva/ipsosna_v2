@@ -267,7 +267,7 @@ view: tbl_demographics_v2 {
 
   dimension: vertical_automotive {
     group_label: "Demographic Fields"
-    type: yesno
+    type: string
     sql: ${TABLE}.Vertical_Automotive ;;
   }
 
